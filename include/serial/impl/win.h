@@ -63,6 +63,11 @@ public:
 
   virtual ~SerialImpl ();
 
+  int fd()
+  {
+      return fd_;
+  }
+
   void
   open ();
 
@@ -74,7 +79,7 @@ public:
 
   size_t
   available ();
-  
+
   bool
   waitReadable (uint32_t timeout);
 

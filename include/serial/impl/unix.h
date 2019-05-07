@@ -55,7 +55,7 @@ using serial::IOException;
 
 class MillisecondTimer {
 public:
-  MillisecondTimer(const uint32_t millis);         
+  MillisecondTimer(const uint32_t millis);
   int64_t remaining();
 
 private:
@@ -73,6 +73,11 @@ public:
               flowcontrol_t flowcontrol);
 
   virtual ~SerialImpl ();
+
+  int fd()
+  {
+      return fd_;
+  }
 
   void
   open ();

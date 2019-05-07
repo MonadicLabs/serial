@@ -188,6 +188,8 @@ public:
   /*! Destructor */
   virtual ~Serial ();
 
+  int fd();
+
   /*!
    * Opens the serial port as long as the port is set and the port isn't
    * already open.

@@ -77,6 +77,12 @@ Serial::~Serial ()
   delete pimpl_;
 }
 
+int
+Serial::fd()
+{
+  return pimpl_->fd();  
+}
+
 void
 Serial::open ()
 {
